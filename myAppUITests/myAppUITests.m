@@ -80,7 +80,7 @@
   [self expectationForPredicate:existPredicate
             evaluatedWithObject:textField
                         handler:nil];
-//33
+
   [self waitForExpectationsWithTimeout:waitForElementAppearTimeInterval
                                handler:nil];
   [textField tap];
@@ -88,7 +88,7 @@
   [textField typeText:@"Workout"];
   [app.buttons[@"done"] tap];
 
-  XCTAssertEqual(count + 2, app.tables.cells.count);
+  XCTAssertEqual(count + 1, app.tables.cells.count);
 }
 
 - (void)testDelete {
